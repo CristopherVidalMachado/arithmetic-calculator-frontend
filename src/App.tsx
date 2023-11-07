@@ -1,18 +1,35 @@
 import * as React from "react"
 import {
   ChakraProvider,
-  Box,
-  Text,
+  Flex,
   Link,
   VStack,
   Code,
   Grid,
   theme,
+  FormControl,
+  FormLabel,
+  Input,
+   
+  Checkbox,
+  Stack,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
 
+import {
+ 
+  Box,
+ 
+} from '@chakra-ui/react'
+
 export const App = () => (
+
+  
   <ChakraProvider theme={theme}>
     <Box textAlign="center" fontSize="xl">
       <Grid minH="100vh" p={3}>
@@ -36,3 +53,4 @@ export const App = () => (
     </Box>
   </ChakraProvider>
 )
+
