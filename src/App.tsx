@@ -1,56 +1,32 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  Flex,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-  FormControl,
-  FormLabel,
-  Input,
-   
-  Checkbox,
-  Stack,
-  Button,
-  Heading,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import * as React from 'react';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import ProTip from './ProTip';
 
-import {
- 
-  Box,
- 
-} from '@chakra-ui/react'
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}.
+    </Typography>
+  );
+}
 
-export const App = () => (
-
-  
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code>  save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider>
-)
-
+export default function App() {
+  return (
+    <Container maxWidth="sm">
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Material UI Vite.js example in TypeScript
+        </Typography>
+        <ProTip />
+        <Copyright />
+      </Box>
+    </Container>
+  );
+}
